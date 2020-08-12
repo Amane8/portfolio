@@ -4,7 +4,7 @@
   "description": "Portfolio site",
   "main": "index.js",
   "scripts": {
-    "test": "echo Works"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "Andrey",
   "license": "ISC",
