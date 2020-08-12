@@ -1,0 +1,14 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Works"
+  },
+  "author": "Andrey",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
