@@ -1,18 +1,11 @@
 $primary-color: #444;
 $secondary-color: #17cdff;
+$secondary-color-dark: #0b80a1;
 $backgroundImg: url(../img/background.jpeg);
 
 * {
   box-sizing: border-box;
   margin: 0;
-}
-
-.overlay {
-  background-color: rgba($primary-color, 0.8);
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
 }
 
 body {
@@ -22,20 +15,29 @@ body {
   color: white;
   font-family: 'Martel', serif;
   line-height: 1.5;
+
+  &:before {
+    content: '';
+    background-color: rgba($primary-color, 0.9);
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 main {
   margin-left: 50px;
 
   h1 {
-    font-size: 3rem;
+    font-size: 6rem;
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
-  &#home {
+  #home {
     overflow: hidden;
     h1 {
       margin-top: 30vh;
@@ -49,6 +51,8 @@ li {
 
 header {
   position: fixed;
+  top: 25px;
+  right: 25px;
   width: 100%;
   z-index: 2;
   display: flex;
@@ -57,7 +61,6 @@ header {
 }
 
 .menu-btn {
-  margin: 10px;
   transition-duration: 0.6s;
 
   &:hover {
@@ -86,6 +89,26 @@ header {
 
   &:hover {
     color: $secondary-color;
+  }
+}
+
+#viewWorkBtn {
+  height: 70px;
+  width: 250px;
+  margin-top: 50px;
+  background-color: transparent;
+  border: 2px solid $secondary-color;
+  color: inherit;
+  font-size: 2rem;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: $secondary-color-dark;
+    border-color: $secondary-color-dark;
+  }
+
+  &:active {
+    // border: inherit;
   }
 }
 

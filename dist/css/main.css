@@ -2,13 +2,6 @@
   box-sizing: border-box;
   margin: 0; }
 
-.overlay {
-  background-color: rgba(68, 68, 68, 0.8);
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  width: 100%; }
-
 body {
   background-image: url(../img/background.jpeg);
   background-attachment: fixed;
@@ -16,16 +9,23 @@ body {
   color: white;
   font-family: 'Martel', serif;
   line-height: 1.5; }
+  body:before {
+    content: '';
+    background-color: rgba(68, 68, 68, 0.9);
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
 
 main {
   margin-left: 50px; }
   main h1 {
-    font-size: 3rem; }
+    font-size: 6rem; }
   main h2 {
-    font-size: 2rem; }
-  main#home {
+    font-size: 4rem; }
+  main #home {
     overflow: hidden; }
-    main#home h1 {
+    main #home h1 {
       margin-top: 30vh; }
 
 li {
@@ -33,6 +33,8 @@ li {
 
 header {
   position: fixed;
+  top: 25px;
+  right: 25px;
   width: 100%;
   z-index: 2;
   display: flex;
@@ -40,7 +42,6 @@ header {
   align-items: flex-end; }
 
 .menu-btn {
-  margin: 10px;
   transition-duration: 0.6s; }
   .menu-btn:hover {
     transition-duration: 0.6s;
@@ -61,6 +62,19 @@ header {
   color: white; }
   .nav-link:hover {
     color: #17cdff; }
+
+#viewWorkBtn {
+  height: 70px;
+  width: 250px;
+  margin-top: 50px;
+  background-color: transparent;
+  border: 2px solid #17cdff;
+  color: inherit;
+  font-size: 2rem;
+  transition: 0.5s; }
+  #viewWorkBtn:hover {
+    background-color: #0b80a1;
+    border-color: #0b80a1; }
 
 .text-secondary {
   color: #17cdff; }
