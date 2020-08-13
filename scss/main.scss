@@ -1,25 +1,46 @@
 $primary-color: #444;
 $secondary-color: #17cdff;
+$backgroundImg: url(../img/background.jpeg);
 
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
+.overlay {
+  background-color: rgba($primary-color, 0.8);
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  background-color: $primary-color;
+  background-image: $backgroundImg;
+  background-attachment: fixed;
+  background-position: center;
   color: white;
-  margin: 0;
   font-family: 'Martel', serif;
   line-height: 1.5;
 }
 
-h1 {
-  font-size: 3rem;
-}
+main {
+  margin-left: 50px;
 
-h2 {
-  font-size: 2rem;
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 30vh;
+    }
+  }
 }
 
 li {
@@ -36,34 +57,36 @@ header {
 }
 
 .menu-btn {
+  margin: 10px;
   transition-duration: 0.6s;
-}
 
-.menu-btn:hover {
-  transition-duration: 0.6s;
-  transform: rotate(90deg);
-}
-
-.menu-btn:hover .btn-line {
-  background-color: $secondary-color;
-  transition-duration: 0.6s;
+  &:hover {
+    transition-duration: 0.6s;
+    transform: rotate(90deg);
+  
+    .btn-line {
+      background-color: $secondary-color;
+      transition-duration: 0.6s;
+    }
+  }
 }
 
 .btn-line {
   width: 30px;
   height: 5px;
   margin: 5px;
-  border-radius: 18%;
+  // border-radius: 18%;
   background-color: white;
+  transition-duration: 0.6s;
 }
 
 .nav-link {
   text-decoration: none;
   color: white;
-}
 
-.nav-link:hover {
-  color: $secondary-color;
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 .text-secondary {
