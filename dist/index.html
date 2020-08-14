@@ -7,21 +7,13 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Martel:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-    </div>
-    
-    <nav>
-      <li><a href="#" class="nav-link">Home</a></li>
-      <li><a href="#" class="nav-link">My projects</a></li>
-      <li><a href="#" class="nav-link">Contact me</a></li>
-    </nav>
-  </header>
-  
+<body id="body">
+  <nav>
+    <li><a href="#body" class="nav-link">Home</a></li>
+    <li><a href="#projects" class="nav-link">My projects</a></li>
+    <li><a href="#contact" class="nav-link">Contact me</a></li>
+  </nav>
+
   <main>
     <section  id='home'>
       <h1><span class='text-secondary'>Andrey</span> Chernyavskiy</h1>
@@ -30,7 +22,24 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 class="sectionHeader">My <span class='text-secondary'>Projects</span></h2>
+    </section>
+
+    <section id="contact">
+      <h2 class="sectionHeader"><span class='text-secondary'>Contact</span> me</h2>
+      <div id='formDiv'>
+        <form action="#" id="contactForm">
+          <label for="name">Your name</label>
+          <input type="text" name="name">
+  
+          <label for="email">Your email</label>
+          <input type="email" name="email">
+  
+          <label for="text">Your message</label>
+          <textarea name="" id=""></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </section>
   </main>
 
