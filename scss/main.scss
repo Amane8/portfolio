@@ -138,6 +138,7 @@ section {
   width: 400px;
   margin: auto;
   background-color: $black-color;
+  border-radius: 30px;
 
   #contactForm {
     display: flex;
@@ -152,6 +153,19 @@ section {
 
     textarea {
       height: 150px;
+    }
+
+    button {
+      margin-top: 25px;
+      border: 2px solid $secondary-color-dark;
+      background-color: $secondary-color-dark;
+      font-size: 1.2rem;
+      color: white;
+      transition: 0.3s;
+
+      &:hover {
+        border: 2px solid $secondary-color;
+      }
     }
   }
 }
