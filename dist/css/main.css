@@ -1,9 +1,12 @@
 * {
-  box-sizing: border-box;
-  margin: 0; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
 body {
   background-image: url(../img/background.jpeg);
@@ -12,14 +15,17 @@ body {
   color: white;
   font-family: 'Martel', serif;
   line-height: 1.5;
-  position: relative; }
-  body:before {
-    content: '';
-    background-color: rgba(68, 68, 68, 0.9);
-    z-index: -1;
-    position: fixed;
-    height: 100%;
-    width: 100%; }
+  position: relative;
+}
+
+body:before {
+  content: '';
+  background-color: rgba(68, 68, 68, 0.9);
+  z-index: -1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
 
 nav {
   position: sticky;
@@ -28,29 +34,49 @@ nav {
   width: 100%;
   height: 45px;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  background-color: rgba(0, 0, 0, 0.7); }
-  nav li {
-    list-style: none; }
-    nav li:hover {
-      border-bottom: 1px solid #17cdff; }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li:hover {
+  border-bottom: 1px solid #17cdff;
+}
 
 .menu-btn {
-  transition-duration: 0.6s; }
-  .menu-btn:hover {
-    transition-duration: 0.6s;
-    transform: rotate(90deg); }
-    .menu-btn:hover .btn-line {
-      background-color: #17cdff;
-      transition-duration: 0.6s; }
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.menu-btn:hover {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.menu-btn:hover .btn-line {
+  background-color: #17cdff;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
 
 .btn-line {
   width: 30px;
   height: 5px;
   margin: 5px;
   background-color: white;
-  transition-duration: 0.6s; }
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
 
 .nav-link {
   display: block;
@@ -58,25 +84,38 @@ nav {
   padding: 10px 15px 10px 15px;
   text-decoration: none;
   font-size: 1.2rem;
-  color: white; }
-  .nav-link:hover {
-    color: #17cdff; }
+  color: white;
+}
+
+.nav-link:hover {
+  color: #17cdff;
+}
 
 main {
-  overflow: hidden; }
-  main #home {
-    padding-left: 50px; }
-  main h1 {
-    font-size: 6rem;
-    padding-top: 30vh; }
-  main h2 {
-    font-size: 4rem; }
+  overflow: hidden;
+}
+
+main #home {
+  padding-left: 50px;
+}
+
+main h1 {
+  font-size: 6rem;
+  padding-top: 30vh;
+}
+
+main h2 {
+  font-size: 4rem;
+}
 
 section {
-  height: 100vh; }
-  section .sectionHeader {
-    padding-top: 80px;
-    text-align: center; }
+  height: 100vh;
+}
+
+section .sectionHeader {
+  padding-top: 80px;
+  text-align: center;
+}
 
 #viewWorkBtn {
   display: block;
@@ -89,38 +128,68 @@ section {
   font-size: 2rem;
   padding: 10px;
   text-decoration: none;
-  transition: 0.5s; }
-  #viewWorkBtn:hover {
-    background-color: #0b80a1;
-    border-color: #0b80a1; }
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#viewWorkBtn:hover {
+  background-color: #0b80a1;
+  border-color: #0b80a1;
+}
 
 #formDiv {
   width: 400px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 30px; }
-  #formDiv #contactForm {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: auto;
-    padding: 15px; }
-    #formDiv #contactForm * {
-      padding: 10px; }
-    #formDiv #contactForm textarea {
-      height: 150px; }
-    #formDiv #contactForm button {
-      margin-top: 25px;
-      border: 2px solid #0b80a1;
-      background-color: #0b80a1;
-      font-size: 1.2rem;
-      color: white;
-      transition: 0.3s; }
-      #formDiv #contactForm button:hover {
-        border: 2px solid #17cdff; }
+  border-radius: 30px;
+}
+
+#formDiv #contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  margin: auto;
+  padding: 15px;
+}
+
+#formDiv #contactForm * {
+  padding: 10px;
+}
+
+#formDiv #contactForm textarea {
+  height: 150px;
+}
+
+#formDiv #contactForm button {
+  margin-top: 25px;
+  border: 2px solid #0b80a1;
+  background-color: #0b80a1;
+  font-size: 1.2rem;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#formDiv #contactForm button:hover {
+  border: 2px solid #17cdff;
+}
 
 .text-secondary {
-  color: #17cdff; }
+  color: #17cdff;
+}
+
+@-webkit-keyframes menu-btn-rotate {
+  100% {
+  }
+}
 
 @keyframes menu-btn-rotate {
-  100% { } }
+  100% {
+  }
+}
+/*# sourceMappingURL=main.css.map */
