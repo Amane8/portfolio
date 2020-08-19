@@ -1,5 +1,5 @@
 $primary-color: #444;
-$secondary-color: #17cdff;
+$secondary-color: #35d3ff;
 $secondary-color-dark: #0b80a1;
 $black-color: rgba(#000000, 0.7);
 $backgroundImg: url(../img/background.jpeg);
@@ -34,7 +34,6 @@ body {
 
 nav {
   position: sticky;
-  position: -webkit-sticky;
   top: 0px;
   width: 100%;
   height: 45px;
@@ -136,8 +135,9 @@ section {
 #formDiv {
 
   width: 400px;
-  margin: auto;
+  margin: 50px auto;
   background-color: $black-color;
+  // border: 2px solid $secondary-color;
   border-radius: 30px;
 
   #contactForm {
@@ -149,14 +149,15 @@ section {
   
     * {
       padding: 10px;
+      font-family: 'Martel', serif;
     }
 
     textarea {
-      height: 150px;
+      height: 200px;
     }
 
     button {
-      margin-top: 25px;
+      margin: 25px 0px;
       border: 2px solid $secondary-color-dark;
       background-color: $secondary-color-dark;
       font-size: 1.2rem;
